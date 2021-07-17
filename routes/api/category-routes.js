@@ -6,11 +6,11 @@ const { Category, Product } = require('../../models');
 router.get('/', (req, res) => {
     // find all categories
     // be sure to include its associated Products
-    Catergory.findAll({
-            attributes: ["id", "catergory_name"],
+    Category.findAll({
+            attributes: ["id", "category_name"],
             include: [{
                 model: Product,
-                attributes: ["id", "product_name", "price", "stock", "catergory-id"],
+                attributes: ["id", "product_name", "price", "stock", "category-id"],
             }, ],
         })
         .then((dbCategoryData) => res.json(dbCategoryData))
@@ -23,13 +23,13 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
     // find one category by its `id` value
     // be sure to include its associated Products
-    Catergory.findOne({
+    Category.findOne({
             where: {
                 id: req.params.id,
             },
             include: [{
                 model: Product,
-                attributes: ["id", "product_name", "price", "stock", "catergory-id"],
+                attributes: ["id", "product_name", "price", "stock", "category-id"],
             }, ],
         })
         .then((dbCategoryData) => {
