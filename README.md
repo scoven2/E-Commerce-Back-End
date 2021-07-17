@@ -4,7 +4,7 @@
 
 This e-commerce backend displays a database of products based on their categories and tags. Using Express.js API and Sequelize, I was able to interact with a MySql database.
 
-[Link Video]()
+[Link Video](https://drive.google.com/file/d/14u-4PfOF24QpVgbOiZOBGseg8cn11B47/view)
 
 ## Table of contents
 - [Description](#description)
